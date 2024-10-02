@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Історія</h1>
+    {{ history }}
+    <h3>Надіслати дію</h3>
+    <form action="" method="post">
+        <label for="textfield">Введіть текст:</label>
+        <input type="text" id="textfield" name="textfield" required>
+        <button type="submit">Відправити</button>
+    </form>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
