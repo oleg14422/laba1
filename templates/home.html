@@ -9,9 +9,10 @@
     {{ history }}
     <h3>Надіслати дію</h3>
     <form action="" method="post">
-        <label for="textfield">Введіть текст:</label>
-        <input type="text" id="textfield" name="textfield" required>
-        <button type="submit">Відправити</button>
+        {{ form.hidden_tag() }}
+        <label for="text">Введіть текст:</label>
+        {{ form.text()}}
+        {{ form.submit() }}
     </form>
     {% if error %}
         <p>{{ error }}</p>
